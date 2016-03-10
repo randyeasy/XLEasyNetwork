@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'XLEasyNetwork_Example', :exclusive => true do
+  pod 'XLEasyNetwork', :path => '../'
+end
+
+target 'XLEasyNetwork_Tests', :exclusive => true do
+  pod 'XLEasyNetwork', :path => '../'
+
+  
+end
