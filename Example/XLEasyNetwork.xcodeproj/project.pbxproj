@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2531127F1C98F909000E071A /* XLEDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2531127E1C98F909000E071A /* XLEDemoViewController.m */; };
+		2531129F1C995674000E071A /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2531129E1C995674000E071A /* Launch Screen.storyboard */; };
+		253112A11C9969A5000E071A /* upload.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 253112A01C9969A5000E071A /* upload.jpg */; };
+		46756AF1EE289F2EE9FE8C4C /* libPods-XLEasyNetwork_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7E454CEC89ACCAFA370A63D /* libPods-XLEasyNetwork_Example.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -20,9 +24,8 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		6086118E4E58B8BAE5EC165E /* Pods_XLEasyNetwork_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E043286AB1F2264F8C36AB0 /* Pods_XLEasyNetwork_Tests.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		AF0DC223C7DB8143BA36192B /* Pods_XLEasyNetwork_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A7C5FF29377C8CF1E047C1 /* Pods_XLEasyNetwork_Example.framework */; };
+		C3B5965A0F3C406A71B8C512 /* libPods-XLEasyNetwork_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F84AD07C45AD997B254867BE /* libPods-XLEasyNetwork_Tests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +40,11 @@
 
 /* Begin PBXFileReference section */
 		09F838F1DE660AE6F57910E6 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		0E043286AB1F2264F8C36AB0 /* Pods_XLEasyNetwork_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLEasyNetwork_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		18A7C5FF29377C8CF1E047C1 /* Pods_XLEasyNetwork_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XLEasyNetwork_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FEA6A04CCD5368F75476A2B /* Pods-XLEasyNetwork_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLEasyNetwork_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-XLEasyNetwork_Example/Pods-XLEasyNetwork_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2531127D1C98F909000E071A /* XLEDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLEDemoViewController.h; sourceTree = "<group>"; };
+		2531127E1C98F909000E071A /* XLEDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLEDemoViewController.m; sourceTree = "<group>"; };
+		2531129E1C995674000E071A /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		253112A01C9969A5000E071A /* upload.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = upload.jpg; sourceTree = "<group>"; };
 		5EDFBE5D71420160263273DC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* XLEasyNetwork_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLEasyNetwork_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -65,6 +70,8 @@
 		AB6B157AB5F70C03FB69E6C2 /* Pods-XLEasyNetwork_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLEasyNetwork_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XLEasyNetwork_Tests/Pods-XLEasyNetwork_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B09D1DB10389EF5577024913 /* XLEasyNetwork.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XLEasyNetwork.podspec; path = ../XLEasyNetwork.podspec; sourceTree = "<group>"; };
 		B61B029EE177ABA6CCDDB1AA /* Pods-XLEasyNetwork_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLEasyNetwork_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XLEasyNetwork_Example/Pods-XLEasyNetwork_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		B7E454CEC89ACCAFA370A63D /* libPods-XLEasyNetwork_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLEasyNetwork_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F84AD07C45AD997B254867BE /* libPods-XLEasyNetwork_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XLEasyNetwork_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +82,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				AF0DC223C7DB8143BA36192B /* Pods_XLEasyNetwork_Example.framework in Frameworks */,
+				46756AF1EE289F2EE9FE8C4C /* libPods-XLEasyNetwork_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +93,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				6086118E4E58B8BAE5EC165E /* Pods_XLEasyNetwork_Tests.framework in Frameworks */,
+				C3B5965A0F3C406A71B8C512 /* libPods-XLEasyNetwork_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +128,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				18A7C5FF29377C8CF1E047C1 /* Pods_XLEasyNetwork_Example.framework */,
-				0E043286AB1F2264F8C36AB0 /* Pods_XLEasyNetwork_Tests.framework */,
+				B7E454CEC89ACCAFA370A63D /* libPods-XLEasyNetwork_Example.a */,
+				F84AD07C45AD997B254867BE /* libPods-XLEasyNetwork_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,8 +142,12 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* XLEViewController.h */,
 				6003F5A6195388D20070C39A /* XLEViewController.m */,
+				2531127D1C98F909000E071A /* XLEDemoViewController.h */,
+				2531127E1C98F909000E071A /* XLEDemoViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				253112A01C9969A5000E071A /* upload.jpg */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				2531129E1C995674000E071A /* Launch Screen.storyboard */,
 			);
 			name = "Example for XLEasyNetwork";
 			path = XLEasyNetwork;
@@ -278,7 +289,9 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				2531129F1C995674000E071A /* Launch Screen.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				253112A11C9969A5000E071A /* upload.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +406,7 @@
 				6003F59E195388D20070C39A /* XLEAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* XLEViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				2531127F1C98F909000E071A /* XLEDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

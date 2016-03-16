@@ -90,7 +90,7 @@
 }
 
 - (NSDictionary *)headers{
-    return [self.headers copy];
+    return [self.mutHeaders copy];
 }
 
 - (void)setGzip:(BOOL)gzip{

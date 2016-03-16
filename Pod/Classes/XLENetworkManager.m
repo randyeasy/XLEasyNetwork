@@ -154,12 +154,9 @@ NSString *const XLE_NETWORK_VERSION = @"1.0.0";
         }
         return 0;
     }
-    NSURLSessionTask * task = [self.manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+    NSURLSessionTask * task = [self.manager downloadTaskWithRequest:request progress:progress destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
         return [NSURL fileURLWithPath:path];
     } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        [weakSelf finishRequestWithTaskId:taskId owner:weakOwner];
         if (![weakSelf analysisRequestCanceledWithTaskId:taskId]) {
             if (error) {
                 if (failure) {
@@ -177,7 +174,9 @@ NSString *const XLE_NETWORK_VERSION = @"1.0.0";
                 }
             }
         }
+        [weakSelf finishRequestWithTaskId:taskId owner:weakOwner];
     }];
+    [task resume];
     [self.taskDic setObject:task forKey:[NSString stringWithFormat:@"%ld",taskId]];
     return taskId;
 }
@@ -219,7 +218,6 @@ NSString *const XLE_NETWORK_VERSION = @"1.0.0";
         return 0;
     }
     NSURLSessionTask * task = [self.manager uploadTaskWithRequest:request fromFile:[NSURL fileURLWithPath:formFile.filePath] progress:progress completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        [weakSelf finishRequestWithTaskId:taskId owner:weakOwner];
         if (![weakSelf analysisRequestCanceledWithTaskId:taskId]) {
             if (error) {
                 if (failure) {
@@ -237,9 +235,11 @@ NSString *const XLE_NETWORK_VERSION = @"1.0.0";
                 }
             }
         }
+        [weakSelf finishRequestWithTaskId:taskId owner:weakOwner];
     }];
     if (task) {
         [self.taskDic setObject:task forKey:[NSString stringWithFormat:@"%ld",taskId]];
+        [task resume];
     }
     return taskId;
 }
