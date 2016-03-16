@@ -31,8 +31,8 @@
 - (void)doAddItemsOperation{
     [super doAddItemsOperation];
     [self.items addObject:[XLEDemoItem itemWithName:@"请求测试" desc:@"get 请求" callback:^{
-        XLERequestParams *params = [[XLERequestParams alloc] initWithParams:@{@"id":@"871715731"} method:XLE_HTTP_GET];
-        [[XLENetworkManager sharedInstance] requestWithOwner:nil url:@"http://itunes.apple.com/lookup" params:params success:^(id  _Nonnull response, NSDictionary * _Nonnull responseHeaders, XLERequestParams * _Nonnull params) {
+        XLERequestParams *params = [[XLERequestParams alloc] initWithParams:nil method:XLE_HTTP_GET];
+        [[XLENetworkManager sharedInstance] requestWithOwner:nil url:@"https://httpbin.org/get" params:params success:^(id  _Nonnull response, NSDictionary * _Nonnull responseHeaders, XLERequestParams * _Nonnull params) {
             NSLog(@"response:%@,resonseHeaders:%@",response,responseHeaders);
         } failure:^(NSError * _Nonnull error, XLERequestParams * _Nonnull params) {
             NSLog(@"error:%@",error);
@@ -46,6 +46,29 @@
         } failure:^(NSError * _Nonnull error, XLERequestParams * _Nonnull params) {
             NSLog(@"error:%@",error);
         }];
+    }]];
+    
+    [self.items addObject:[XLEDemoItem itemWithName:@"请求测试" desc:@"post 请求 owner" callback:^{
+        XLERequestParams *params = [[XLERequestParams alloc] initWithParams:@{@"id":@"871715731"}];
+        NSObject *object = [[NSObject alloc] init];
+        [[XLENetworkManager sharedInstance] requestWithOwner:object url:@"http://itunes.apple.com/lookup" params:params success:^(id  _Nonnull response, NSDictionary * _Nonnull responseHeaders, XLERequestParams * _Nonnull params) {
+            NSLog(@"response:%@,resonseHeaders:%@",response,responseHeaders);
+        } failure:^(NSError * _Nonnull error, XLERequestParams * _Nonnull params) {
+            NSLog(@"error:%@",error);
+        }];
+    }]];
+    
+    [self.items addObject:[XLEDemoItem itemWithName:@"请求测试" desc:@"post 请求 取消" callback:^{
+        XLERequestParams *params = [[XLERequestParams alloc] initWithParams:@{@"id":@"871715731"}];
+        NSInteger taskId = [[XLENetworkManager sharedInstance] requestWithOwner:nil url:@"http://itunes.apple.com/lookup" params:params success:^(id  _Nonnull response, NSDictionary * _Nonnull responseHeaders, XLERequestParams * _Nonnull params) {
+            NSLog(@"response:%@,resonseHeaders:%@",response,responseHeaders);
+        } failure:^(NSError * _Nonnull error, XLERequestParams * _Nonnull params) {
+            NSLog(@"error:%@",error);
+        }];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [[XLENetworkManager sharedInstance] cancelRequestWithTaskId:taskId owner:nil];
+        });
     }]];
     
     [self.items addObject:[XLEDemoItem itemWithName:@"下载测试" desc:@"大图下载" callback:^{
@@ -75,6 +98,7 @@
             NSLog(@"error:%@",error);
         }];
     }]];
+    
 }
 
 @end
