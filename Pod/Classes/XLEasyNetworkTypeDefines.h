@@ -1,13 +1,13 @@
 //
-//  XLEasyTypeDefines.h
+//  XLEasyNetworkTypeDefines.h
 //  Pods
 //
 //  Created by Randy on 16/3/10.
 //
 //
 
-#ifndef XLEasyTypeDefines_h
-#define XLEasyTypeDefines_h
+#ifndef XLEasyNetworkTypeDefines_h
+#define XLEasyNetworkTypeDefines_h
 
 typedef NS_ENUM(NSInteger, XLEHTTPMethod) {
     XLE_HTTP_GET = 0,
@@ -35,4 +35,4 @@ extern NSString *const XLE_FILEPARAMS_MP3;
  */
 extern NSString *const XLE_FILEPARAMS_PIC;
 
-#endif /* XLEasyTypeDefines_h */
+#endif /* XLEasyNetworkTypeDefines_h */

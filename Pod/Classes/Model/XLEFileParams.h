@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "XLEasyTypeDefines.h"
+#import "XLEasyNetworkTypeDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

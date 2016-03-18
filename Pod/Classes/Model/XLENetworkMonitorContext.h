@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XLEasyTypeDefines.h"
+#import "XLEasyNetworkTypeDefines.h"
 @interface XLENetworkMonitorContext : NSObject
 @property (weak, nonatomic) id listener;
 

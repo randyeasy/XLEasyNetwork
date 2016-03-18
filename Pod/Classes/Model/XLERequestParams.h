@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "XLEasyTypeDefines.h"
+#import "XLEasyNetworkTypeDefines.h"
 
 @interface XLERequestParams : NSObject
 @property (assign, nonatomic, getter=isGZIP) BOOL gzip;

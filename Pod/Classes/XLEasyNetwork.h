@@ -9,7 +9,7 @@
 #ifndef XLEasyNetwork_h
 #define XLEasyNetwork_h
 
-#import "XLEasyTypeDefines.h"
+#import "XLEasyNetworkTypeDefines.h"
 #import "XLENetworkManager.h"
 #import "XLENetworkMonitor.h"
 
